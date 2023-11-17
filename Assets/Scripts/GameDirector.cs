@@ -17,6 +17,7 @@ public class GameDirector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         this.TimerText = GameObject.Find("Timer");
         this.PointText = GameObject.Find("Point");
         ItemGen = GameObject.Find("ItemGenerator");
@@ -37,6 +38,7 @@ public class GameDirector : MonoBehaviour
             this.ItemGen.GetComponent<ItemGenerator>().SetParameter(10000.0f, 0, 0);
             gameOverPanel.gameObject.SetActive(true);
             ResultText.text = "È¹µæÁ¡¼ö : " + point.ToString();
+            Time.timeScale = 0;
         }
         else if(0 <= this.time && this.time < 5 )
             this.ItemGen.GetComponent<ItemGenerator>().SetParameter(0.9f, 3, -0.04f);

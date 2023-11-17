@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 710687037825135232}
   - component: {fileID: 1033126849025245560}
   - component: {fileID: 1033126849025245562}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: bombPrefab
   m_TagString: Bomb
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 6683697774621415322}
   - component: {fileID: 3375278286708772770}
   - component: {fileID: 5910950747558022169}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Icosphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 5939353932562222938}
   - component: {fileID: 4912876297040801070}
   - component: {fileID: 7900999158559302580}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 6040925863902152634}
   - component: {fileID: 3986219128602658170}
   - component: {fileID: 7815860971330944465}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

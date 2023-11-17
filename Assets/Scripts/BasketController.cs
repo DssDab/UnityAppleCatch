@@ -8,7 +8,9 @@ public class BasketController : MonoBehaviour
     public AudioClip bombSE;
     AudioSource aud;
     GameObject gameDirector;
-    ParticleSystem particle;
+    ParticleSystem.MainModule particle;
+
+    LayerMask m_StageMask = -1;
 
     void Start()
     {
@@ -16,8 +18,10 @@ public class BasketController : MonoBehaviour
         QualitySettings.vSyncCount = 0;
 
         aud = GetComponent<AudioSource>();
-        particle = GetComponent<ParticleSystem>();
+        particle = GetComponent<ParticleSystem>().main;
         gameDirector = GameObject.Find("GameDirector");
+
+        m_StageMask = 1 << LayerMask.NameToLayer("Stage");
     }
 
     void Update()
@@ -33,7 +37,7 @@ public class BasketController : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, m_StageMask.value))
             {
                 float x = Mathf.RoundToInt(hit.point.x);
                 float z = Mathf.RoundToInt(hit.point.z);
@@ -48,7 +52,6 @@ public class BasketController : MonoBehaviour
             this.aud.PlayOneShot(this.appledSE);
             gameDirector.GetComponent<GameDirector>().GetApple();
             particle.startColor = Color.white;
-            particle.Play();
 
         }
         else
@@ -56,8 +59,8 @@ public class BasketController : MonoBehaviour
             this.aud.PlayOneShot(this.bombSE);
             gameDirector.GetComponent<GameDirector>().GetBomb();
             particle.startColor = Color.black;
-            particle.Play();
         }
+        this.GetComponent<ParticleSystem>().Play();
         Destroy(other.gameObject);
 
     }

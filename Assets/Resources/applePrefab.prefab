@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8066646151764886371}
   - component: {fileID: 8768688754862498071}
   - component: {fileID: 5781308963959173005}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7016584814008982435}
   - component: {fileID: 1389867053423952795}
   - component: {fileID: 8041532704476463136}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Icosphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8622135777022459238}
   - component: {fileID: 8099326595105851237}
   - component: {fileID: 2437751561902963592}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 3765703186905415353}
   - component: {fileID: 3731459227208820313}
   - component: {fileID: 3731459227208820315}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: applePrefab
   m_TagString: Apple
   m_Icon: {fileID: 0}
